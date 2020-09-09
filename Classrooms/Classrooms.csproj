@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200906191910_changedDBname.cs" />
+    <Compile Remove="Migrations\20200906191910_changedDBname.Designer.cs" />
+    <Compile Remove="Migrations\20200907085242_createdb.cs" />
+    <Compile Remove="Migrations\20200907085242_createdb.Designer.cs" />
+    <Compile Remove="Migrations\20200907141335_changedTables.cs" />
+    <Compile Remove="Migrations\20200907141335_changedTables.Designer.cs" />
+    <Compile Remove="Migrations\20200907142023_enrollmentIdToInt.cs" />
+    <Compile Remove="Migrations\20200907142023_enrollmentIdToInt.Designer.cs" />
+    <Compile Remove="Migrations\20200907142613_newtables.cs" />
+    <Compile Remove="Migrations\20200907142613_newtables.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

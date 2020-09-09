@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\vicba\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\vicba\\.nuget\\packages"
+    ]
+  }
+}

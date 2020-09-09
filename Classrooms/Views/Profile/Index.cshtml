@@ -1,0 +1,24 @@
+﻿@model Classrooms.ViewModels.ProfileViewModel;
+
+@{ ViewData["Title"] = "Profile"; }
+
+<h2>Hello @Model.Name</h2>
+
+<a asp-action="Create" asp-controller="Course" class="btn btn-outline-primary">Create Course</a>
+<table class="table table-bordered table-striped m-4 col-md-6">
+    <tr>
+        <th class="bg-primary text-light">
+            Enrollments
+        </th>
+    </tr>
+    @foreach (Enrollment e in Model.Enrollments)
+    {
+        <tr>
+            <td>
+                <a asp-controller="Course" asp-action="CourseDetail" asp-route-id="@e.CourseID" class="btn btn-outline-info">
+                @e.CourseID.ToString()
+                </a>
+            </td>
+        </tr>
+    }
+</table>

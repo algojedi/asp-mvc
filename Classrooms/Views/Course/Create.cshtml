@@ -1,0 +1,21 @@
+﻿@{ ViewData["Title"] = "Create Course"; }
+@inject UserManager<ApplicationUser> userMgr
+@model Classrooms.ViewModels.CreateCourseViewModel
+
+@{ 
+    var user = await userMgr.GetUserAsync(User);
+    var userId = user?.Id;
+}
+
+<form action="create" method="post" >
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <input asp-for="id" value="@userId" hidden />
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+</form>
