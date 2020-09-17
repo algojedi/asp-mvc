@@ -1,16 +1,16 @@
+using Classrooms.Data;
+
 public class UnitOfWork : IUnitOfWork
 {
-    private readonly PlutoContext _context;
+    private readonly SchoolContext _context;
 
-    public UnitOfWork(PlutoContext context)
+    public UnitOfWork(SchoolContext context)
     {
         _context = context;
         Courses = new CourseRepository(_context);
-        Authors = new AuthorRepository(_context);
     }
 
     public ICourseRepository Courses { get; private set; }
-    public IAuthorRepository Authors { get; private set; }
 
     public int Complete()
     {
@@ -21,5 +21,4 @@ public class UnitOfWork : IUnitOfWork
     {
         _context.Dispose();
     }
-}
 }

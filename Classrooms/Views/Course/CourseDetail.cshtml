@@ -1,12 +1,13 @@
 ﻿@{ ViewData["Title"] = "Create Details"; }
 @model Classrooms.ViewModels.CourseDetailViewModel
+@inject UserManager<ApplicationUser> userManager
 
 <div>I am a course called @Model.CourseTitle</div>
 
 <div>And here are da students in this course of sorts:</div>
 @foreach (var student in Model.Participants)
 {
-    <div>@student</div>
+    <div> @student </div>
 }
 
 
